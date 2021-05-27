@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private float jumpForce = 4;
+    private float jumpForce = 8;
 
     public float JumpForce
     {
