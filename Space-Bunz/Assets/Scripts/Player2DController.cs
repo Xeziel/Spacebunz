@@ -6,16 +6,13 @@ public class Player2DController : MonoBehaviour
 {
     private float moveLR, jump, movement;
     private Rigidbody2D rb;
-    private float timer = 0f;
-
-    [SerializeField]
-    Player player = null;
-
-
+    private Speed player;
+    bool isGrounded;
 
     private void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        player = new Speed(5, 4);
     }
     // Update is called once per frame
     void Update()
@@ -33,6 +30,14 @@ public class Player2DController : MonoBehaviour
         Rotate();
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.name == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
 
     private void Move()
     {
@@ -44,17 +49,12 @@ public class Player2DController : MonoBehaviour
 
     private void Jump()
     {
-        if (timer > 0f)
-        {
-                timer -= Time.fixedDeltaTime;
-        }
-
         if (jump > 0)
         {
-            if (timer < 0.01f)
+            if (isGrounded)
             {
-                timer = 1f;
                 rb.AddForce(new Vector2(0, player.JumpForce), ForceMode2D.Impulse);
+                isGrounded = false;
             }
         }
     }

@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Speed
 {
-    [SerializeField]
-    internal Player2DController player2DController = null;
+    private float movementSpeed;
+    private float jumpForce;
 
-    private float movementSpeed = 5;
+    public Speed (float movementspeed, float jumpforce)
+    {
+        movementSpeed = movementspeed;
+        jumpForce = jumpforce;
+    }
+
+    
 
     public float MovementSpeed
     {
@@ -21,7 +27,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private float jumpForce = 8;
+    
 
     public float JumpForce
     {
