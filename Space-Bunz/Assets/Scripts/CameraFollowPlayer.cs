@@ -3,8 +3,8 @@ using UnityEngine;
 public class CameraFollowPlayer : MonoBehaviour
 {
 
-    
 
+    private Vector3 targetpos;
     private float xPosMin = -9.96f;
     private float xPosMax = 9.96f;
     private float yPosMin = 0f;
@@ -28,9 +28,19 @@ public class CameraFollowPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 targetpos = target.position;
+        Clamp();
+        FollowPlayer();
+    }
+
+    private void Clamp()
+    {
+        targetpos = target.position;
         targetpos.y = Mathf.Clamp(target.position.y, yPosMin, yPosMax);
         targetpos.x = Mathf.Clamp(target.position.x, xPosMin, xPosMax);
+    }
+
+    private void FollowPlayer()
+    {
         transform.position = new Vector3(targetpos.x, targetpos.y, -10);
     }
 }

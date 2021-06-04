@@ -7,12 +7,17 @@ public class Player2DController : MonoBehaviour
     private float moveLR, jump, movement;
     private Rigidbody2D rb;
     private Speed player;
-    bool isGrounded;
+    private bool isGrounded;
+    private PlayerPush playerPush;
+    //private PlayerInventory playerInventory;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         player = new Speed(5, 4);
+        playerPush = new PlayerPush(0.2f);
+
+        //playerInventory = new PlayerInventory(5);
     }
     // Update is called once per frame
     void Update()
