@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
-
+    JumpPad jumpPad;
     
 
     void Start()
@@ -12,17 +12,15 @@ public class InteractableObject : MonoBehaviour
         if (gameObject.tag == "Jumppad")
         {
             Debug.Log("Tagged");
-            //JumpPad jumppad = new JumpPad();
-            JumpPad jumpPad = gameObject.AddComponent<JumpPad>();
+            jumpPad = new JumpPad(10f);    
         } 
-        //else if (gameObject.tag == "Key")
-        //{
-        //    Key key = gameObject.AddComponent<Key>();
-        //}
-        else if (gameObject.tag == "Door")
-        {
-            Door door = new Door("RedKey");
-        }
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (this.gameObject.tag == "Jumppad")
+        {
+            jumpPad.OnTriggerStay2D(other);
+        }
     }
 }

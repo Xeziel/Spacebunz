@@ -6,7 +6,7 @@ public class Player2DController : MonoBehaviour
 {
     private float moveLR, jump, movement;
     private Rigidbody2D rb;
-    private Speed player;
+    public Speed player;
     private bool isGrounded;
     private PlayerPush playerPush;
     //private PlayerInventory playerInventory;
