@@ -9,6 +9,7 @@ public class Player2DController : MonoBehaviour
     private Speed player;
     private bool isGrounded;
     private PlayerPush playerPush;
+    private HealthBar healthbar;
     //private PlayerInventory playerInventory;
 
     private void Awake()
@@ -16,6 +17,8 @@ public class Player2DController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = new Speed(5, 4);
         playerPush = new PlayerPush(0.2f);
+        healthbar = new HealthBar(3);
+        
 
         //playerInventory = new PlayerInventory(5);
     }
@@ -26,6 +29,11 @@ public class Player2DController : MonoBehaviour
         moveLR = Input.GetAxisRaw("Horizontal") * player.MovementSpeed;
         jump = Input.GetAxisRaw("Vertical") * player.JumpForce;
         movement = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.Space) && healthbar.CurrentHealth > 0)
+        {
+            healthbar.TakeDamage(1);
+        }
     }
 
     private void FixedUpdate()
