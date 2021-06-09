@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Jumppad
   - Drag
+  - InteractableObject
+  - Button0
+  - Button1
+  - Button2
+  - Button3
   layers:
   - Default
   - TransparentFX

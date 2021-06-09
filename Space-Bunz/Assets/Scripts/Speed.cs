@@ -7,6 +7,21 @@ public class Speed
     private float movementSpeed;
     private float jumpForce;
 
+    enum Spd
+    {
+        slowed = 2,
+        normal = 5
+    }
+
+    enum Jmp
+    {
+        low = 1,
+        normal = 4,
+        high = 8,
+        veryhigh = 15
+
+    }
+
     public Speed (float movementspeed, float jumpforce)
     {
         movementSpeed = movementspeed;
@@ -23,7 +38,7 @@ public class Speed
         }
         set
         {
-            MovementSpeed = value;
+            movementSpeed = value;
         }
     }
 
@@ -37,7 +52,7 @@ public class Speed
         }
         set
         {
-            JumpForce = value;
+            jumpForce = value;
         }
     }
 }

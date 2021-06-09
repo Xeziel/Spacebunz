@@ -6,7 +6,6 @@ public class UpdateCaller : MonoBehaviour
 {
     private static UpdateCaller instance = null;
     public static System.Action OnUpdate;
-    public static System.Action OnOnTriggerEnter2D;
 
     void Awake()
     {
@@ -23,11 +22,5 @@ public class UpdateCaller : MonoBehaviour
     {
         if (OnUpdate != null)
             OnUpdate();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (OnOnTriggerEnter2D != null)
-            OnOnTriggerEnter2D();
     }
 }
