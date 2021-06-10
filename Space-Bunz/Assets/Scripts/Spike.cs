@@ -14,7 +14,8 @@ public class Spike
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Ouch, charlie");
+        other.GetComponent<Player2DController>().healthBar.TakeDamage(damage);
+        Debug.Log("Ouchies!");
     }
 
 

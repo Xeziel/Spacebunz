@@ -9,12 +9,14 @@ public class Player2DController : MonoBehaviour
     public Speed player;
     private bool isGrounded;
     private PlayerPush playerPush;
+    public HealthBar healthBar;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         player = new Speed(5, 4);
         playerPush = new PlayerPush(0.2f);
+        healthBar = new HealthBar(3);
     }
     // Update is called once per frame
     void Update()

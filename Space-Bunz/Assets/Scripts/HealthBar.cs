@@ -39,7 +39,7 @@ public class HealthBar
         slider.value = health;
     }
 
-    public  void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         SetHealth(currentHealth);
