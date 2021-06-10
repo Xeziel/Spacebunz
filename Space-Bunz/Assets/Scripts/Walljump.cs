@@ -2,13 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Walljump : MonoBehaviour
+public class Walljump
 {
-    private void OnTriggerStay2D(Collider2D other)
+
+    private float wallJumpPower;
+    private float wallJumpHeight;
+
+    public Walljump(float wallJumpPower, float wallJumpHeight)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        this.wallJumpHeight = wallJumpHeight;
+        this.wallJumpPower = wallJumpPower;
+    }
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.name == "WalljumpArea")
         {
-            other.attachedRigidbody.AddForce( new Vector2(-8, 4), ForceMode2D.Impulse);
+            if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetKeyDown(KeyCode.Space))
+            {
+                GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(wallJumpPower * -Input.GetAxisRaw("Horizontal"), wallJumpHeight);
+            }
         }
     }
 

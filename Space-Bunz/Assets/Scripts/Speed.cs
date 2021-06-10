@@ -6,14 +6,17 @@ public class Speed
 {
     private float movementSpeed;
     private float jumpForce;
+    private float wallForce;
+    private float wallHeight;
 
-    enum Spd
+    public enum Spd
     {
         slowed = 2,
-        normal = 5
+        normal = 5,
+        fast= 8
     }
 
-    enum Jmp
+    public enum Jmp
     {
         low = 1,
         normal = 4,
@@ -22,10 +25,13 @@ public class Speed
 
     }
 
-    public Speed (float movementspeed, float jumpforce)
+    public Speed (Spd movementspeed, Jmp jumpforce, Spd wallforce, Jmp wallheight)
     {
-        movementSpeed = movementspeed;
-        jumpForce = jumpforce;
+        movementSpeed = (float)movementspeed;
+        jumpForce = (float)jumpforce;
+        wallForce = (float)wallforce;
+        wallHeight = (float)wallheight;
+
     }
 
     
@@ -55,5 +61,8 @@ public class Speed
             jumpForce = value;
         }
     }
+
+    public float WallForce { get; set; }
+    public float WallHeight { get; set; }
 }
 

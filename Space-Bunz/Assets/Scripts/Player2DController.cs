@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Player2DController : MonoBehaviour
 {
-    private float moveLR, jump, movement;
+    private RaycastHit2D groundCheck;
     private Rigidbody2D rb;
     public Speed player;
-    private bool isGrounded;
     private PlayerPush playerPush;
     public HealthBar healthBar;
+    private bool isGrounded;
+    private float moveLR, jump, movement;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = new Speed(5, 4);
+        player = new Speed(Speed.Spd.normal, Speed.Jmp.high, Speed.Spd.normal, Speed.Jmp.high);
         playerPush = new PlayerPush(0.2f);
         healthBar = new HealthBar(3);
     }
@@ -22,6 +23,7 @@ public class Player2DController : MonoBehaviour
     void Update()
     {
 
+        
         moveLR = Input.GetAxisRaw("Horizontal") * player.MovementSpeed;
         jump = Input.GetAxisRaw("Vertical") * player.JumpForce;
         movement = Input.GetAxisRaw("Horizontal");
@@ -34,13 +36,13 @@ public class Player2DController : MonoBehaviour
         Rotate();
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (collision.collider.name == "Ground")
+        if (other.name == "WalljumpArea")
         {
-            isGrounded = true;
+            WallJump();
         }
-    }
+     }
 
 
     private void Move()
@@ -55,10 +57,11 @@ public class Player2DController : MonoBehaviour
     {
         if (jump > 0)
         {
+            CheckIfGrounded();
             if (isGrounded)
             {
-                rb.AddForce(new Vector2(0, player.JumpForce), ForceMode2D.Impulse);
-                isGrounded = false;
+                rb.velocity = (new Vector2(0, player.JumpForce));
+               isGrounded = false;
             }
         }
     }
@@ -70,4 +73,25 @@ public class Player2DController : MonoBehaviour
             transform.rotation = movement < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
         }
     }
+
+    private void CheckIfGrounded()
+    {
+        groundCheck = Physics2D.Raycast(GameObject.Find("feet").transform.position, Vector2.down, 0.2f);
+
+        if (groundCheck.collider != null && groundCheck.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            Debug.Log("grounded!");
+            isGrounded = true;
+        }
+    }
+
+    private void WallJump()
+    {
+        if (movement != 0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.velocity = new Vector2(player.WallForce * -movement, player.WallHeight);
+        }
+    }
+
+
 }
