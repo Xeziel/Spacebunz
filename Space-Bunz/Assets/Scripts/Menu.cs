@@ -25,7 +25,7 @@ public class Menu : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadSceneAsync("main");
     }
 
     public void EndGame()
@@ -49,7 +49,11 @@ public class Menu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadSceneAsync("main");
         Resume();
+    }
+    public void RG()
+    {
+        SceneManager.LoadSceneAsync("main");
     }
 }
