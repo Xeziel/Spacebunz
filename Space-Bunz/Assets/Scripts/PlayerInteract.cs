@@ -29,20 +29,33 @@ public class PlayerInteract : MonoBehaviour
             //check to see if the object is locked
             if (currentInterobjScript.Locked)
             {
-                //check to see if we have the object needed to unlock
-                //search our inventory for the item needed - if found unlock object
-                if (playerInventory.FindItem(currentInterobjScript.ItemNeeded))
+                if (currentInterobjScript.ItemNeeded != null && currentInterobjScript.ItemNeeded2 == null) //so only 1 item is needed
                 {
-                    //we found the item needed
-                    currentInterobjScript.Locked = false;
-                    Debug.Log(currentInterObj.name + " was unlocked");
+                    //check to see if we have the object needed to unlock, and search our inventory for the item needed - if found unlock object
+                    if (playerInventory.FindItem(currentInterobjScript.ItemNeeded) && Input.GetKeyDown(KeyCode.E))
+                    {
+                        //we found the item needed
+                        currentInterobjScript.Locked = false;
+                        Debug.Log(currentInterObj.name + " was unlocked");
 
-                    //door opens
-                    currentInterObj.SetActive(false);
-                    playerInventory.RemoveItem(currentInterobjScript.ItemNeeded); //removes item we needed/key from inventory
+                        //door opens (disappears)
+                        currentInterObj.SetActive(false);
+                        playerInventory.RemoveItem(currentInterobjScript.ItemNeeded); //removes item we needed/key from inventory
+                    }
                 }
-                else
-                    Debug.Log(currentInterObj.name + "was not unlocked");
+                if (currentInterobjScript.ItemNeeded != null && currentInterobjScript.ItemNeeded2 != null) // so 2 items needed
+                {
+                    if (playerInventory.FindItem(currentInterobjScript.ItemNeeded) && playerInventory.FindItem(currentInterobjScript.ItemNeeded2) && Input.GetKeyDown(KeyCode.E))
+                    {
+                        //we found the item needed
+                        currentInterobjScript.Locked = false;
+                        Debug.Log(currentInterObj.name + " was unlocked");
+
+                        //door opens (disappears)
+                        currentInterObj.SetActive(false);
+                        playerInventory.RemoveItem(currentInterobjScript.ItemNeeded, currentInterobjScript.ItemNeeded2); //removes item we needed/key from inventory
+                    }
+                }
             }
             else
                 Debug.Log("geen locked door");

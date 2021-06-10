@@ -16,6 +16,9 @@ public class InteractableObject : MonoBehaviour
     [SerializeField]
     private GameObject itemNeeded; //item needed in order to interact with this item
 
+    [SerializeField]
+    private GameObject itemNeeded2;
+
     JumpPad jumpPad;
     Spike spikes;
     
@@ -67,5 +70,11 @@ public class InteractableObject : MonoBehaviour
     {
         get { return itemNeeded; }
         set { itemNeeded = value; }
+    }
+
+    public GameObject ItemNeeded2
+    {
+        get { return itemNeeded2; }
+        set { itemNeeded2 = value; }
     }
 }
