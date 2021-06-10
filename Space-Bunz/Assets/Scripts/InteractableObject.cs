@@ -16,7 +16,11 @@ public class InteractableObject : MonoBehaviour
     [SerializeField]
     private GameObject itemNeeded; //item needed in order to interact with this item
 
+    [SerializeField]
+    private GameObject itemNeeded2;
+
     JumpPad jumpPad;
+    Spike spikes;
     
 
     void Start()
@@ -25,7 +29,15 @@ public class InteractableObject : MonoBehaviour
         {
             Debug.Log("Tagged");
             jumpPad = new JumpPad(10f);    
-        } 
+        }
+        
+        if(gameObject.tag == "Spike")
+        {
+            Debug.Log("Spiked!");
+            spikes = new Spike(1);
+
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -33,6 +45,11 @@ public class InteractableObject : MonoBehaviour
         if (this.gameObject.tag == "Jumppad")
         {
             jumpPad.OnTriggerStay2D(other);
+        }
+
+        if (this.gameObject.tag == "Spike")
+        {
+            spikes.OnTriggerEnter2D(other);
         }
     }
 
@@ -53,5 +70,11 @@ public class InteractableObject : MonoBehaviour
     {
         get { return itemNeeded; }
         set { itemNeeded = value; }
+    }
+
+    public GameObject ItemNeeded2
+    {
+        get { return itemNeeded2; }
+        set { itemNeeded2 = value; }
     }
 }

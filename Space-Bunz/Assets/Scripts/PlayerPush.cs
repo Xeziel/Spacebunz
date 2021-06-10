@@ -28,7 +28,6 @@ public class PlayerPush
     {
         
         RaycastHit2D grabCheck = Physics2D.Raycast(GrabDetect.position, Vector2.right * ThePlayer.transform.localScale, rayDist);
-        Debug.Log("Collided!!");
         if (grabCheck.collider != null && grabCheck.collider.tag == "Drag")
         {
             
