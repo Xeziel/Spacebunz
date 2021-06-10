@@ -14,7 +14,7 @@ public class PlayerInventory
     public PlayerInventory()
     {
         inventory = new GameObject[4]; //the inventory array can hold 4 items
-        inventoryButtons = new Button[4];
+        inventoryButtons = new Button[4]; //the buttonInventory array has 4 'slots'
 
         inventoryButtons[0] = GameObject.FindGameObjectWithTag("Button0").GetComponent<Button>();
         inventoryButtons[1] = GameObject.FindGameObjectWithTag("Button1").GetComponent<Button>();
@@ -76,8 +76,36 @@ public class PlayerInventory
             if (inventory [i] == item)
             {
                 inventory[i] = null;
+                
                 //Update UI
+                inventoryButtons[i].image.enabled = false;
+                inventoryButtons[i].image.overrideSprite = null;
+                break;
+            }
+        }
+    }
 
+    public void RemoveItem(GameObject item, GameObject item2)
+    {
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] == item)
+            {
+                inventory[i] = null;
+
+                //Update UI
+                inventoryButtons[i].image.enabled = false;
+                inventoryButtons[i].image.overrideSprite = null;
+                break;
+            }
+        }
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] == item2)
+            {
+                inventory[i] = null;
+
+                //Update UI
                 inventoryButtons[i].image.enabled = false;
                 inventoryButtons[i].image.overrideSprite = null;
                 break;
