@@ -5,9 +5,9 @@ public class CameraFollowPlayer : MonoBehaviour
 
 
     private Vector3 targetpos;
-    private float xPosMin = -9.96f;
-    private float xPosMax = 9.96f;
-    private float yPosMin = 0f;
+    private float xPosMin = -14f;
+    private float xPosMax = 30.85f;
+    private float yPosMin = -3.9f;
     private float yPosMax = 26.2f;
 
     //public CameraFollowPlayer(float minX, float maxX, float minY, float maxY)
