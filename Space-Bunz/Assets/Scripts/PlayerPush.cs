@@ -38,7 +38,7 @@ public class PlayerPush
                 grabCheck.collider.gameObject.transform.SetParent(BoxHolder, true);
                 grabCheck.collider.gameObject.transform.position = BoxHolder.position;
                 grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                ThePlayer.GetComponent<Player2DController>().player.JumpForce = 2f;
+                ThePlayer.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.low;
             }
             else
             {
@@ -50,7 +50,7 @@ public class PlayerPush
                     tempactive = false;
                 }
                 grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                ThePlayer.GetComponent<Player2DController>().player.JumpForce = 8f;
+                ThePlayer.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.high;
             }
         }
     }

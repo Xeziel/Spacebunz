@@ -11,6 +11,8 @@ public class Player2DController : MonoBehaviour
     public HealthBar healthBar;
     private bool isGrounded;
     private float moveLR, jump, movement;
+    private bool isWallJumping = false;
+    private bool isMovementOn;
 
     private void Awake()
     {
@@ -24,25 +26,43 @@ public class Player2DController : MonoBehaviour
     {
 
         
-        moveLR = Input.GetAxisRaw("Horizontal") * player.MovementSpeed;
-        jump = Input.GetAxisRaw("Vertical") * player.JumpForce;
+        moveLR = Input.GetAxisRaw("Horizontal") * (float)player.MovementSpeed;
+        jump = Input.GetAxisRaw("Vertical") * (float)player.JumpForce;
         movement = Input.GetAxisRaw("Horizontal");
     }
 
     private void FixedUpdate()
     {
-        Move();
+        if (isMovementOn) 
+        {
+            Move();
+        }
         Jump();
         Rotate();
+        WallJump();
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
-        if (other.name == "WalljumpArea")
+        if (other.gameObject.name == "Wall")
         {
-            WallJump();
+            Debug.Log("Walled");
+            isWallJumping = true;
         }
-     }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        movementOn();
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Wall")
+        {
+            isWallJumping = false;
+        }
+    }
 
 
     private void Move()
@@ -60,7 +80,7 @@ public class Player2DController : MonoBehaviour
             CheckIfGrounded();
             if (isGrounded)
             {
-                rb.velocity = (new Vector2(0, player.JumpForce));
+                rb.velocity = new Vector2(0, (float)player.JumpForce);
                isGrounded = false;
             }
         }
@@ -76,7 +96,7 @@ public class Player2DController : MonoBehaviour
 
     private void CheckIfGrounded()
     {
-        groundCheck = Physics2D.Raycast(GameObject.Find("feet").transform.position, Vector2.down, 0.2f);
+        groundCheck = Physics2D.Raycast(GameObject.Find("feet").transform.position, Vector2.down, 0.02f);
 
         if (groundCheck.collider != null && groundCheck.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
@@ -87,10 +107,22 @@ public class Player2DController : MonoBehaviour
 
     private void WallJump()
     {
-        if (movement != 0 && Input.GetKeyDown(KeyCode.Space))
+        if (movement != 0 && jump > 0 && isWallJumping)
         {
-            rb.velocity = new Vector2(player.WallForce * -movement, player.WallHeight);
+            Debug.Log("Walljumping!");
+            rb.velocity = new Vector2((float)player.WallForce * -movement, (float)player.WallHeight);
+            MovementOff();
         }
+    }
+
+    private void MovementOff()
+    {
+        isMovementOn = false;
+    }
+
+    private void movementOn()
+    {
+        isMovementOn = true;
     }
 
 

@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 51292456}
   - component: {fileID: 51292457}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 122031469}
   - component: {fileID: 122031470}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150333213}
   - component: {fileID: 150333214}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164213038}
   - component: {fileID: 164213039}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184550212}
   - component: {fileID: 184550213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189302935}
   - component: {fileID: 189302936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 219647259}
   - component: {fileID: 219647260}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 268058468}
   - component: {fileID: 268058467}
   - component: {fileID: 268058466}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9 (1)
   m_TagString: InteractableObject
   m_Icon: {fileID: 0}
@@ -1276,7 +1276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 293924953}
   - component: {fileID: 293924954}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1383,8 +1383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -287.3, y: 194.7}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: -228.76224, y: 176.63411}
+  m_SizeDelta: {x: 201.7889, y: 27.2962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338154407
 MonoBehaviour:
@@ -1595,7 +1595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429165645}
   - component: {fileID: 429165646}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1677,7 +1677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 441715061}
   - component: {fileID: 441715062}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1858,7 +1858,7 @@ GameObject:
   - component: {fileID: 521705700}
   - component: {fileID: 521705699}
   m_Layer: 0
-  m_Name: groot_level_test_9
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1967,7 +1967,7 @@ GameObject:
   - component: {fileID: 522947557}
   - component: {fileID: 522947556}
   - component: {fileID: 522947559}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform
   m_TagString: Jumppad
   m_Icon: {fileID: 0}
@@ -2070,7 +2070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 525647225}
   - component: {fileID: 525647226}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2351,7 +2351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582527763}
   - component: {fileID: 582527764}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2496,7 +2496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 752155753}
   - component: {fileID: 752155754}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2759,7 +2759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 831160342}
   - component: {fileID: 831160343}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2955,7 +2955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856873210}
   - component: {fileID: 856873211}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3037,7 +3037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 922209127}
   - component: {fileID: 922209128}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3252,7 +3252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021546872}
   - component: {fileID: 1021546873}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3436,7 +3436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262881114}
   - component: {fileID: 1262881115}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3758,7 +3758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300346726}
   m_Layer: 0
-  m_Name: Walls
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3772,11 +3772,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300346725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.208577, y: 0.48452452, z: -286.32037}
+  m_LocalPosition: {x: 1.46, y: 3.49, z: -286.32037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 521705698}
-  - {fileID: 1888268888}
+  - {fileID: 1864547729}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3790,7 +3790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305365274}
   - component: {fileID: 1305365275}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3895,7 +3895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000076293945, y: -0.0000104904175}
+  m_AnchoredPosition: {x: 0, y: -0.000009536743}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1363816121
@@ -3990,7 +3990,7 @@ GameObject:
   - component: {fileID: 1364651244}
   - component: {fileID: 1364651247}
   - component: {fileID: 1364651246}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9
   m_TagString: InteractableObject
   m_Icon: {fileID: 0}
@@ -4140,7 +4140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371153563}
   - component: {fileID: 1371153564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4222,7 +4222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1380097159}
   - component: {fileID: 1380097160}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4304,7 +4304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1397958285}
   - component: {fileID: 1397958286}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4521,7 +4521,7 @@ GameObject:
   - component: {fileID: 1413937516}
   - component: {fileID: 1413937515}
   - component: {fileID: 1413937514}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: box
   m_TagString: Drag
   m_Icon: {fileID: 0}
@@ -4655,7 +4655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1419112423}
   - component: {fileID: 1419112424}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4737,7 +4737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450836615}
   - component: {fileID: 1450836614}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4924,7 +4924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590966728}
   - component: {fileID: 1590966729}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5267,7 +5267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1737292211}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hazards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5299,7 +5299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1744818206}
   - component: {fileID: 1744818207}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5384,7 +5384,7 @@ GameObject:
   - component: {fileID: 1770325061}
   - component: {fileID: 1770325060}
   - component: {fileID: 1770325059}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spikes
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -5399,7 +5399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770325057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.304, y: -1.543, z: 0}
+  m_LocalPosition: {x: -0.02, y: -1.543, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1737292211}
@@ -5524,6 +5524,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1790416247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790416248}
+  m_Layer: 0
+  m_Name: feet
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1790416248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790416247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.004, y: -0.0762, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1826026306}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796442797
 GameObject:
   m_ObjectHideFlags: 0
@@ -5534,7 +5564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1796442798}
   - component: {fileID: 1796442799}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5616,7 +5646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1811279830}
   - component: {fileID: 1811279831}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5722,6 +5752,7 @@ Transform:
   - {fileID: 1126647770}
   - {fileID: 1638980430}
   - {fileID: 2005684420}
+  - {fileID: 1790416248}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5778,7 +5809,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -5806,7 +5837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1828621469}
   - component: {fileID: 1828621470}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5868,6 +5899,115 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5750325390626993820, guid: a4cde9d528cf3ed4fb1fe663b3d8555f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.24}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1864547728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864547729}
+  - component: {fileID: 1864547731}
+  - component: {fileID: 1864547730}
+  m_Layer: 0
+  m_Name: Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864547729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864547728}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 11.62, y: 0.54, z: 286.32037}
+  m_LocalScale: {x: 50, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1300346726}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!61 &1864547730
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864547728}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.24}
+    newSize: {x: 0.32, y: 0.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.24}
+  m_EdgeRadius: 0
+--- !u!212 &1864547731
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864547728}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7368687927782054346, guid: a4cde9d528cf3ed4fb1fe663b3d8555f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5957,76 +6097,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872118863}
   m_CullTransparentMesh: 1
---- !u!1 &1888268887
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1888268888}
-  - component: {fileID: 1888268890}
-  - component: {fileID: 1888268889}
-  m_Layer: 0
-  m_Name: WalljumpArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1888268888
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888268887}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 5.13, y: 3.6500003, z: 286.32037}
-  m_LocalScale: {x: 50, y: 5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1300346726}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1888268889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888268887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17983440bd3c37d41aba711288f3c457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &1888268890
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888268887}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0006118044, y: 0.10650373}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3204916, y: 0.15343817}
-  m_EdgeRadius: 0
 --- !u!1 &1900243958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6036,7 +6106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1900243959}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6274,7 +6344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2003065892}
   - component: {fileID: 2003065893}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6410,8 +6480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -365.6, y: 198.3}
-  m_SizeDelta: {x: 43.1554, y: 43.1554}
+  m_AnchoredPosition: {x: -323.24054, y: 180.4909}
+  m_SizeDelta: {x: 44.9769, y: 43.1055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2060482536
 MonoBehaviour:
@@ -6461,7 +6531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2091275193}
   - component: {fileID: 2091275194}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6618,7 +6688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2135012047}
   - component: {fileID: 2135012048}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groot_level_test_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}

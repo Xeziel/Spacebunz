@@ -24,7 +24,7 @@ public class Spike
         if (other.gameObject.name == "box")
         {
             Object.Destroy(other.gameObject);
-            player.GetComponent<Player2DController>().player.JumpForce = 4f;
+            player.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.high;
         }
     }
 

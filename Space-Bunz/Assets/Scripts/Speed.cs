@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Speed
 {
-    private float movementSpeed;
-    private float jumpForce;
-    private float wallForce;
-    private float wallHeight;
+    private Spd movementSpeed;
+    private Jmp jumpForce;
+    private Spd wallForce;
+    private Jmp wallHeight;
 
     public enum Spd
     {
@@ -18,25 +18,24 @@ public class Speed
 
     public enum Jmp
     {
-        low = 1,
+        low = 2,
         normal = 4,
         high = 8,
         veryhigh = 15
-
     }
 
     public Speed (Spd movementspeed, Jmp jumpforce, Spd wallforce, Jmp wallheight)
     {
-        movementSpeed = (float)movementspeed;
-        jumpForce = (float)jumpforce;
-        wallForce = (float)wallforce;
-        wallHeight = (float)wallheight;
+        movementSpeed = movementspeed;
+        jumpForce = jumpforce;
+        wallForce = wallforce;
+        wallHeight = wallheight;
 
     }
 
     
 
-    public float MovementSpeed
+    public Spd MovementSpeed
     {
         get
         {
@@ -50,7 +49,7 @@ public class Speed
 
     
 
-    public float JumpForce
+    public Jmp JumpForce
     {
         get
         {
@@ -62,7 +61,27 @@ public class Speed
         }
     }
 
-    public float WallForce { get; set; }
-    public float WallHeight { get; set; }
+    public Spd WallForce {
+        get 
+        {
+            return wallForce;
+        } 
+        set
+        {
+            wallForce = value;
+        }
+    }
+
+    public Jmp WallHeight
+    {
+        get
+        {
+            return wallHeight;
+        }
+        set
+        {
+            wallHeight = value;
+        }
+    }
 }
 
