@@ -15,16 +15,9 @@ public class PlayerPush
     public PlayerPush(float raydist)
     {
         rayDist = raydist;
-        UpdateCaller.OnUpdate += Update;
     }
 
-    //Destructor: Dit voert hetgeen uit wanneer een 'object' niet meer nodig is.
-    ~PlayerPush()
-    {
-        UpdateCaller.OnUpdate -= Update;
-    }
-
-    void Update()
+    public void Update()
     {
         
         RaycastHit2D grabCheck = Physics2D.Raycast(GrabDetect.position, Vector2.right * ThePlayer.transform.localScale, rayDist);

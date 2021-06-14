@@ -25,7 +25,7 @@ public class Player2DController : MonoBehaviour
     void Update()
     {
 
-        
+        playerPush.Update();
         moveLR = Input.GetAxisRaw("Horizontal") * (float)player.MovementSpeed;
         jump = Input.GetAxisRaw("Vertical") * (float)player.JumpForce;
         movement = Input.GetAxisRaw("Horizontal");

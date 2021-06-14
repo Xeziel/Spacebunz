@@ -33,6 +33,14 @@ public class Speed
 
     }
 
+    public Speed (Spd movementspeed)
+    {
+        movementSpeed = movementspeed;
+        jumpForce = 0;
+        wallForce = 0;
+        wallHeight = 0;
+    }
+
     
 
     public Spd MovementSpeed
