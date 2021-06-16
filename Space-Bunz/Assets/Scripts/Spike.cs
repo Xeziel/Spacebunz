@@ -5,10 +5,17 @@ using UnityEngine;
 public class Spike
 {
 
-    private int damage;
-    GameObject player = GameObject.Find("Player");
+    private Dmg damage;
+    private GameObject player = GameObject.Find("Player");
 
-    public Spike (int damage) 
+    public enum Dmg
+    {
+        low = 1,
+        medium,
+        high
+    }
+
+    public Spike (Dmg damage) 
     {
         this.damage = damage;
     }
@@ -17,7 +24,7 @@ public class Spike
     {
         if (other.gameObject.name == "Player")
         {
-            other.GetComponent<Player2DController>().healthBar.TakeDamage(damage);
+            other.GetComponent<Player2DController>().healthBar.TakeDamage((int) damage);
             Debug.Log("Ouchies!");
         }
 

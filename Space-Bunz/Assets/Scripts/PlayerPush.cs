@@ -7,14 +7,19 @@ public class PlayerPush
     private Transform GrabDetect = GameObject.Find("Grab Detect").transform;
     private Transform BoxHolder = GameObject.Find("Box Holder").transform;
     private GameObject ThePlayer = GameObject.Find("Player");
-    Vector3 temp;
-    bool tempactive = false;
+    private Vector3 temp;
+    private bool tempactive = false;
     private float rayDist;
 
 
     public PlayerPush(float raydist)
     {
         rayDist = raydist;
+    }
+
+    public PlayerPush()
+    {
+        rayDist = 0.2f;
     }
 
     public void Update()
@@ -36,7 +41,6 @@ public class PlayerPush
             else
             {
                 grabCheck.collider.gameObject.transform.SetParent(null, true); // dit released hem (je hebt hem dan niet meer vast)
-                //grabCheck.collider.gameObject.transform.position = BoxHolder.position;
                 if (tempactive == true)
                 {
                     grabCheck.collider.gameObject.transform.position = temp;

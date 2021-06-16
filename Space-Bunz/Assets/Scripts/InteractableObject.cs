@@ -19,8 +19,9 @@ public class InteractableObject : MonoBehaviour
     [SerializeField]
     private GameObject itemNeeded2;
 
-    JumpPad jumpPad;
-    Spike spikes;
+    private JumpPad jumpPad;
+    private Spike spikes;
+    private FlameJet fire;
     
 
     void Start()
@@ -34,10 +35,27 @@ public class InteractableObject : MonoBehaviour
         if(gameObject.tag == "Spike")
         {
             Debug.Log("Spiked!");
-            spikes = new Spike(1);
+            spikes = new Spike(Spike.Dmg.low);
 
         }
+        if (gameObject.tag == "fireboi")
+        {
+            fire = new FlameJet(5, 5, gameObject.GetComponent<Animator>(), gameObject.GetComponent<BoxCollider2D>());
+            Debug.Log("Fireboi made!");
+        } 
+        else
+        {
+            Debug.Log("Uhoh, no fire!");
+        }
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (gameObject.tag == "fireboi")
+        {
+            fire.Update();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -50,6 +68,11 @@ public class InteractableObject : MonoBehaviour
         if (this.gameObject.tag == "Spike")
         {
             spikes.OnTriggerEnter2D(other);
+        }
+
+        if (this.gameObject.tag == "fireboi")
+        {
+            fire.OnTriggerEnter2D(other);
         }
     }
 

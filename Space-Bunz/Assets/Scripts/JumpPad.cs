@@ -5,7 +5,17 @@ using UnityEngine;
 public class JumpPad
 {
     private float jumpForce;
-    public float JumpForce { get; set; }
+    public float JumpForce
+    {
+        get
+        {
+            return jumpForce;
+        }
+        set
+        {
+            jumpForce = value;
+        }
+    }
 
     public JumpPad()
     {
@@ -23,6 +33,4 @@ public class JumpPad
         Debug.Log("Entered trigger");
         other.GetComponent<Rigidbody2D>().velocity = (new Vector2(0, jumpForce));
     }
-
-
 }

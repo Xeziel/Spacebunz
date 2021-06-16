@@ -24,7 +24,6 @@ public class Player2DController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         playerPush.Update();
         moveLR = Input.GetAxisRaw("Horizontal") * (float)player.MovementSpeed;
         jump = Input.GetAxisRaw("Vertical") * (float)player.JumpForce;
