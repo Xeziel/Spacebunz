@@ -24,7 +24,7 @@ public class InteractableObject : MonoBehaviour
     private FlameJet fire;
     
 
-    void Start()
+    private void Start()
     {
         if (gameObject.tag == "Jumppad")
         {

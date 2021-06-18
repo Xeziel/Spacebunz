@@ -22,7 +22,7 @@ public class Player2DController : MonoBehaviour
         healthBar = new HealthBar(3);
     }
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         playerPush.Update();
         moveLR = Input.GetAxisRaw("Horizontal") * (float)player.MovementSpeed;
