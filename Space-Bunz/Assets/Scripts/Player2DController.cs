@@ -7,7 +7,7 @@ public class Player2DController : MonoBehaviour
     private RaycastHit2D groundCheck;
     private Rigidbody2D rb;
     public Speed player;
-    private PlayerPush playerPush;
+    public PlayerPush playerPush;
     public HealthBar healthBar;
     private bool isGrounded;
     private float moveLR, jump, movement;
@@ -19,7 +19,7 @@ public class Player2DController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = new Speed(Speed.Spd.normal, Speed.Jmp.high, Speed.Spd.normal, Speed.Jmp.high);
         playerPush = new PlayerPush(0.2f);
-        healthBar = new HealthBar(3);
+        healthBar = new HealthBar(HealthBar.Hitpoints.High);
     }
     // Update is called once per frame
     private void Update()
@@ -53,6 +53,10 @@ public class Player2DController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         movementOn();
+        if (collision.gameObject.CompareTag("LeftRightPlatform") || collision.gameObject.CompareTag("UpDownplatform"))
+        {
+            this.transform.parent = collision.transform; //setting the transform of the parent (movingplatform) to the transform of the collider (player)
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -60,6 +64,11 @@ public class Player2DController : MonoBehaviour
         if (other.gameObject.name == "Wall")
         {
             isWallJumping = false;
+        }
+
+        if (other.gameObject.CompareTag("LeftRightPlatform") || other.gameObject.CompareTag("UpDownplatform"))
+        {
+            this.transform.parent = null; //collider (player) is no longer a child of movingplatform
         }
     }
 

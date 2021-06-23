@@ -13,6 +13,8 @@ TagManager:
   - Button3
   - Spike
   - fireboi
+  - UpDownplatform
+  - LeftRightPlatform
   layers:
   - Default
   - TransparentFX

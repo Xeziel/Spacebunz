@@ -7,39 +7,53 @@ using UnityEngine.SceneManagement;
 public class HealthBar
 {
     private Slider slider = GameObject.Find("Health bar").GetComponent<Slider>();
-    private int maxHealth;
-    private int currentHealth;
+    private Hitpoints maxHealth;
+    private Hitpoints currentHealth;
 
-    public HealthBar (int maxHealth) 
+
+    public HealthBar (Hitpoints maxHealth) 
     {
         this.maxHealth = maxHealth;
         currentHealth = maxHealth;
     }
 
-    public int MaxHealth 
+    public HealthBar()
+    {
+        maxHealth = Hitpoints.High;
+        currentHealth = Hitpoints.High;
+    }
+
+    public Hitpoints MaxHealth 
     {
         get { return maxHealth; } 
         set { maxHealth = value;}
     }
 
-    public int CurrentHealth 
+    public Hitpoints CurrentHealth 
     {
         get { return currentHealth;}
         set { currentHealth = value;}
     }
 
-    public void SetMaxHealth (int health)
+    public enum Hitpoints
     {
-        slider.maxValue = health;
-        slider.value = health;
+        Low = 1,
+        Medium,
+        High
     }
 
-    public void SetHealth(int health)
+    public void SetMaxHealth (Hitpoints health)
     {
-        slider.value = health;
+        slider.maxValue = (int)health;
+        slider.value = (int)health;
     }
 
-    public void TakeDamage(int damage)
+    public void SetHealth(Hitpoints health)
+    {
+        slider.value = (int)health;
+    }
+
+    public void TakeDamage(Hitpoints damage)
     {
         currentHealth -= damage;
         SetHealth(currentHealth);

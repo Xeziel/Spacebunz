@@ -73,7 +73,14 @@ public class FlameJet
     {
         if (other.name == "Player")
         {
-            other.GetComponent<Player2DController>().healthBar.TakeDamage(1);
+            other.GetComponent<Player2DController>().healthBar.TakeDamage(HealthBar.Hitpoints.Low);
+        }
+
+        if (other.name == "Box")
+        {
+            GameObject.Find("Player").GetComponent<Player2DController>().playerPush.Release();
+            other.gameObject.SetActive(false);           
+            GameObject.Find("Player").GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.high;
         }
     }
 

@@ -24,13 +24,14 @@ public class Spike
     {
         if (other.gameObject.name == "Player")
         {
-            other.GetComponent<Player2DController>().healthBar.TakeDamage((int) damage);
+            other.GetComponent<Player2DController>().healthBar.TakeDamage(HealthBar.Hitpoints.Low);
             Debug.Log("Ouchies!");
         }
 
         if (other.gameObject.name == "box")
         {
-            Object.Destroy(other.gameObject);
+            player.GetComponent<Player2DController>().playerPush.Release();
+            other.gameObject.SetActive(false);           
             player.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.high;
         }
     }

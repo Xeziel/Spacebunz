@@ -31,27 +31,55 @@ public class PlayerPush
             
             if (Input.GetKey(KeyCode.Space))
             {
-                temp = grabCheck.collider.gameObject.transform.position;
-                tempactive = true;
-                grabCheck.collider.gameObject.transform.SetParent(BoxHolder, true);
-                grabCheck.collider.gameObject.transform.position = BoxHolder.position;
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                ThePlayer.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.low;
+                //temp = grabCheck.collider.gameObject.transform.position;
+                //tempactive = true;
+                //grabCheck.collider.gameObject.transform.SetParent(BoxHolder, true);
+                //grabCheck.collider.gameObject.transform.position = BoxHolder.position;
+                //grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                //ThePlayer.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.low;
+                Hold();
             }
             else
             {
-                grabCheck.collider.gameObject.transform.SetParent(null, true); // dit released hem (je hebt hem dan niet meer vast)
-                if (tempactive == true)
-                {
-                    grabCheck.collider.gameObject.transform.position = temp;
-                    tempactive = false;
-                }
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                ThePlayer.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.high;
+                //grabCheck.collider.gameObject.transform.SetParent(null, true); // dit released hem (je hebt hem dan niet meer vast)
+                //if (tempactive == true)
+                //{
+                //    grabCheck.collider.gameObject.transform.position = temp;
+                //    tempactive = false;
+                //}
+                //grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                //ThePlayer.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.high;
+                Release();
             }
         }
     }
 
+
+    public void Release()
+    {
+        RaycastHit2D grabCheck = Physics2D.Raycast(GrabDetect.position, Vector2.right * ThePlayer.transform.localScale, rayDist);
+
+        grabCheck.collider.gameObject.transform.SetParent(null, true); // dit released hem (je hebt hem dan niet meer vast)
+        if (tempactive == true)
+        {
+            grabCheck.collider.gameObject.transform.position = temp;
+            tempactive = false;
+        }
+        grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+        ThePlayer.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.high;
+    }
+
+    public void Hold()
+    {
+        RaycastHit2D grabCheck = Physics2D.Raycast(GrabDetect.position, Vector2.right * ThePlayer.transform.localScale, rayDist);
+
+        temp = grabCheck.collider.gameObject.transform.position;
+        tempactive = true;
+        grabCheck.collider.gameObject.transform.SetParent(BoxHolder, true);
+        grabCheck.collider.gameObject.transform.position = BoxHolder.position;
+        grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        ThePlayer.GetComponent<Player2DController>().player.JumpForce = Speed.Jmp.low;
+    }
 
 
 
