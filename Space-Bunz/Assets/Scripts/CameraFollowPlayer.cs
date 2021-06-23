@@ -5,18 +5,10 @@ public class CameraFollowPlayer : MonoBehaviour
 
 
     private Vector3 targetpos;
-    private float xPosMin = -14f;
-    private float xPosMax = 30.85f;
-    private float yPosMin = -3.9f;
-    private float yPosMax = 26.2f;
-
-    //public CameraFollowPlayer(float minX, float maxX, float minY, float maxY)
-   //{
-    //    xPosMin = minX;
-    //    xPosMax = maxX;
-    //    yPosMin = minY;
-    //    yPosMax = maxY;
-    //}
+    private float xPosMin;
+    private float xPosMax;
+    private float yPosMin;
+    private float yPosMax;
 
     public Transform target;
 
@@ -28,6 +20,15 @@ public class CameraFollowPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
+        targetpos = target.position;
+        if (targetpos.x > 150 && targetpos.x < 215 && targetpos.y < 34)
+        {
+            xPosMin = 163;
+            xPosMax = 210;
+            yPosMin = -1;
+            yPosMax = 32;
+}
+
         Clamp();
         FollowPlayer();
     }

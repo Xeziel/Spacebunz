@@ -19,6 +19,11 @@ public class InteractableObject : MonoBehaviour
     [SerializeField]
     private GameObject itemNeeded2;
 
+    [SerializeField]
+    private float jumpforce;
+    [SerializeField]
+    private float angle;
+
     private JumpPad jumpPad;
     private Spike spikes;
     private FlameJet fire;
@@ -29,7 +34,7 @@ public class InteractableObject : MonoBehaviour
         if (gameObject.tag == "Jumppad")
         {
             Debug.Log("Tagged");
-            jumpPad = new JumpPad(10f);    
+            jumpPad = new JumpPad(jumpforce, angle);    
         }
         
         if(gameObject.tag == "Spike")
