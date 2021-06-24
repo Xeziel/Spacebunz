@@ -24,6 +24,15 @@ public class InteractableObject : MonoBehaviour
     [SerializeField]
     private float angle;
 
+    [SerializeField]
+    private float startTimer;
+
+    [SerializeField]
+    private float flameFireTime;
+
+    [SerializeField]
+    private float flameCooldown;
+
     private JumpPad jumpPad;
     private Spike spikes;
     private FlameJet fire;
@@ -45,7 +54,7 @@ public class InteractableObject : MonoBehaviour
         }
         if (gameObject.tag == "fireboi")
         {
-            fire = new FlameJet(5, 5, gameObject.GetComponent<Animator>(), gameObject.GetComponent<BoxCollider2D>());
+            fire = new FlameJet(flameFireTime, flameCooldown, gameObject.GetComponent<Animator>(), gameObject.GetComponent<BoxCollider2D>(), startTimer);
             Debug.Log("Fireboi made!");
         } 
         else

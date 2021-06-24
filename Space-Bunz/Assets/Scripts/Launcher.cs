@@ -10,6 +10,8 @@ public class Launcher : MonoBehaviour
     private GameObject rocket;
     [SerializeField]
     private float shootspeed;
+    [SerializeField]
+    private float startTimer;
     private float time;
 
     private void Awake()
@@ -19,24 +21,31 @@ public class Launcher : MonoBehaviour
 
     private void FixedUpdate()
     {
-        time -= Time.fixedDeltaTime;
-        if (time < 0.4)
+        if (startTimer > 0)
         {
-            gameObject.GetComponent<Animator>().SetBool("firing", true);
+            startTimer -= Time.fixedDeltaTime;
         }
-        if (time < 0)
+        else
         {
-            
-            if (toTheRight)
+            time -= Time.fixedDeltaTime;
+            if (time < 0.4)
             {
-                Instantiate(rocket, new Vector3(transform.position.x + 2, transform.position.y, -1), Quaternion.Euler(0f, 180f, 0f));
+                gameObject.GetComponent<Animator>().SetBool("firing", true);
             }
-            else
+            if (time < 0)
             {
-                Instantiate(rocket, new Vector3(transform.position.x + -2, transform.position.y, -1), Quaternion.Euler(0f, 0f, 0f));
+
+                if (toTheRight)
+                {
+                    Instantiate(rocket, new Vector3(transform.position.x + 2, transform.position.y, -1), Quaternion.Euler(0f, 180f, 0f));
+                }
+                else
+                {
+                    Instantiate(rocket, new Vector3(transform.position.x + -2, transform.position.y, -1), Quaternion.Euler(0f, 0f, 0f));
+                }
+                gameObject.GetComponent<Animator>().SetBool("firing", false);
+                time = shootspeed;
             }
-            gameObject.GetComponent<Animator>().SetBool("firing", false);
-            time = shootspeed; 
         }
     }
 }
