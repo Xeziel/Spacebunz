@@ -60,6 +60,7 @@ public class FlameJet
             {
                 shooting = false;
             }
+        }
 
             if (shooting)
             {
@@ -74,7 +75,6 @@ public class FlameJet
                 animator.SetBool("isFiring", false);
                 triggerarea.enabled = false;
             }
-        }
     }
 
     // Update is called once per frame
