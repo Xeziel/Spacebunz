@@ -7,7 +7,12 @@ public class MovingPlatform : MonoBehaviour
     private bool moveRight = false;
     private bool moveUp = false;
     private float platformSpeed = 3f;
+    
+    [SerializeField]
     private float maxPlatformPos = 4f;
+
+    [SerializeField]
+    private float minPlatformPos = -4f;
 
 
     // Update is called once per frame
@@ -19,7 +24,7 @@ public class MovingPlatform : MonoBehaviour
             {
                 moveRight = false;
             }
-            if (transform.position.x < -maxPlatformPos)
+            if (transform.position.x < minPlatformPos)
             {
                 moveRight = true;
             }
@@ -40,7 +45,7 @@ public class MovingPlatform : MonoBehaviour
             {
                 moveUp = false;
             }
-            if (transform.position.y < -maxPlatformPos)
+            if (transform.position.y < minPlatformPos)
             {
                 moveUp = true;
             }
