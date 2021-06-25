@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615625755499231090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.46, y: -8.445, z: 0}
+  m_LocalPosition: {x: -10.46, y: -8.445, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 9097344929441015795}
@@ -155,6 +155,11 @@ MonoBehaviour:
   locked: 0
   itemNeeded: {fileID: 0}
   itemNeeded2: {fileID: 0}
+  jumpforce: 0
+  angle: 0
+  startTimer: 0
+  flameFireTime: 0
+  flameCooldown: 0
 --- !u!1 &830852416559011890
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public class InteractPlatform : MonoBehaviour
             {
                 moveUp = false;
             }
-            if (platformGameObject.transform.position.y < -maxPlatformPos)
+            if (platformGameObject.transform.position.y < minPlatformPos)
             {
                 moveUp = true;
             }
@@ -86,10 +86,10 @@ public class InteractPlatform : MonoBehaviour
     {
         if (moveUp)
         {
-            platformGameObject.transform.position = new Vector2(platformGameObject.transform.position.x, platformGameObject.transform.position.y + platformSpeed * Time.deltaTime);
+            platformGameObject.transform.position = new Vector3(platformGameObject.transform.position.x, platformGameObject.transform.position.y + platformSpeed * Time.deltaTime, -1);
         }
         else
-            platformGameObject.transform.position = new Vector2(platformGameObject.transform.position.x, platformGameObject.transform.position.y - platformSpeed * Time.deltaTime);
+            platformGameObject.transform.position = new Vector3(platformGameObject.transform.position.x, platformGameObject.transform.position.y - platformSpeed * Time.deltaTime, -1);
     }
 
 
@@ -97,9 +97,9 @@ public class InteractPlatform : MonoBehaviour
     {
         if (moveRight)
         {
-            platformGameObject.transform.position = new Vector2(platformGameObject.transform.position.x + platformSpeed * Time.deltaTime, platformGameObject.transform.position.y);
+            platformGameObject.transform.position = new Vector3(platformGameObject.transform.position.x + platformSpeed * Time.deltaTime, platformGameObject.transform.position.y, -1);
         }
         else
-            platformGameObject.transform.position = new Vector2(platformGameObject.transform.position.x - platformSpeed * Time.deltaTime, platformGameObject.transform.position.y);
+            platformGameObject.transform.position = new Vector3(platformGameObject.transform.position.x - platformSpeed * Time.deltaTime, platformGameObject.transform.position.y, -1);
     }
 }
