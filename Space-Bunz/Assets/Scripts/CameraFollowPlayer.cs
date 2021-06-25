@@ -23,7 +23,7 @@ public class CameraFollowPlayer : MonoBehaviour
         targetpos = target.position;
         if (targetpos.x > 150 && targetpos.x < 215 && targetpos.y < 34)
         {
-            xPosMin = 163;
+            xPosMin = 162;
             xPosMax = 210;
             yPosMin = -1;
             yPosMax = 32;

@@ -14,12 +14,15 @@ public class Player2DController : MonoBehaviour
     private bool isWallJumping = false;
     private bool isMovementOn;
 
+    private Animator animator;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         player = new Speed(Speed.Spd.normal, Speed.Jmp.high, Speed.Spd.normal, Speed.Jmp.high);
         playerPush = new PlayerPush(0.2f);
         healthBar = new HealthBar(HealthBar.Hitpoints.High);
+        animator = GetComponentInChildren<Animator>();
     }
     // Update is called once per frame
     private void Update()
@@ -28,6 +31,8 @@ public class Player2DController : MonoBehaviour
         moveLR = Input.GetAxisRaw("Horizontal") * (float)player.MovementSpeed;
         jump = Input.GetAxisRaw("Vertical") * (float)player.JumpForce;
         movement = Input.GetAxisRaw("Horizontal");
+
+        animator.SetFloat("Speed", Mathf.Abs(moveLR));
     }
 
     private void FixedUpdate()
@@ -57,6 +62,11 @@ public class Player2DController : MonoBehaviour
         {
             this.transform.parent = collision.transform; //setting the transform of the parent (movingplatform) to the transform of the collider (player)
         }
+        if (animator.GetBool("IsJumping") == true)
+        {
+            animator.SetBool("IsJumping", false);
+        }
+
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -88,8 +98,9 @@ public class Player2DController : MonoBehaviour
             CheckIfGrounded();
             if (isGrounded)
             {
+                animator.SetBool("IsJumping", true);
                 rb.velocity = new Vector2(0, (float)player.JumpForce);
-               isGrounded = false;
+                isGrounded = false;
             }
         }
     }
@@ -109,7 +120,7 @@ public class Player2DController : MonoBehaviour
         if (groundCheck.collider != null && groundCheck.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             Debug.Log("grounded!");
-            isGrounded = true;
+            isGrounded = true;           
         }
     }
 
